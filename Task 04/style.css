@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Jost",serif;
+    min-height: 100vh;
+    background-image: url("./img/images.jpeg"); 
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    position:relative;
+    z-index: 1;
+    
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    background-color:blure blue;
+    padding: 0 40px;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li a{
+    color: white;
+    text-decoration: none;
+}
+.navbar-container .navbar-menu{
+       display: flex;
+       gap: 6rem;
+       list-style: none;
+}
+.navbar-container .navbar-menu li a:hover,
+.navbar-container.navbar-menu li a{
+    color: #162530;
+    background: rgba(188,212,229,0.8);
+    border: 2px solid #fff;
+}
+.navbar-toggle{
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+    transform: all 0.3s ease-in-out;
+}
+
+/* Responsive Style */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+        z-index: 999;
+    }
+    
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(31, 148, 184, 0.9);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    
+    .navbar-menu.active {
+        max-height: 500px;
+    }
+
+    .navbar-container{
+        position: relative;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container{
+        padding: 0 1rem;
+    }
+    .navbar-logo{
+        font-size: 1.7rem;
+    }
+
+    .navbar-container .navbar-menu li a{
+        font-size: 1.2rem;
+        font-size: 3px 15px;
+
+    }
+    
+}
+
